@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#cc0000">
+    <title>StephTeslaStats</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>🚗 StephTeslaStats</h1>
+        </header>
+
+        <!-- Écran de connexion -->
+        <div id="login-screen">
+            <div class="card">
+                <h2>Bienvenue</h2>
+                <p>Connecte-toi avec ton compte Tesla pour voir tes statistiques de déplacement</p>
+                <button id="login-btn" onclick="loginWithTesla()">
+                    Se connecter avec Tesla
+                </button>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard" style="display:none">
+            <div class="card">
+                <label>🚗 Sélectionner un véhicule</label>
+                <select id="vehicle-select" onchange="loadVehicleData()"></select>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-icon">📍</span>
+                    <span class="stat-label">Odomètre</span>
+                    <span class="stat-value" id="odometer">--</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🔋</span>
+                    <span class="stat-label">Batterie</span>
+                    <span class="stat-value" id="battery">--</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">⚡</span>
+                    <span class="stat-label">Autonomie</span>
+                    <span class="stat-value" id="range">--</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🌡️</span>
+                    <span class="stat-label">Température ext.</span>
+                    <span class="stat-value" id="temp">--</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🚀</span>
+                    <span class="stat-label">Vitesse</span>
+                    <span class="stat-value" id="speed">--</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🔌</span>
+                    <span class="stat-label">État</span>
+                    <span class="stat-value" id="state">--</span>
+                </div>
+            </div>
+
+            <button onclick="loadVehicleData()">🔄 Rafraîchir</button>
+            <button id="logout-btn" onclick="logout()">🚪 Déconnexion</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

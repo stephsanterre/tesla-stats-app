@@ -1,0 +1,16 @@
+{
+    "name": "StephTeslaStats",
+    "short_name": "TeslaStats",
+    "description": "Statistiques de déplacement Tesla",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#1a1a1a",
+    "theme_color": "#cc0000",
+    "icons": [
+        {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Tesla_T_symbol.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml"
+        }
+    ]
+}
